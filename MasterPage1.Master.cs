@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace IttaiWebDemo
 {
     public partial class MasterPage1 : System.Web.UI.MasterPage
     {

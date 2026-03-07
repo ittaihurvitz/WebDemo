@@ -8,7 +8,7 @@ using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace IttaiWebDemo
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
@@ -41,7 +41,6 @@ namespace WebApplication3
         public DataSet RetrieveUsersTable(string SQLStr)
         {
             
-            //string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ittai\\OneDrive\\Websites\\WebApplication3\\App_Data\\Database1.mdf;Integrated Security=True";
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(SQLStr, connection);
