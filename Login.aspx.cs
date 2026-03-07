@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -26,7 +27,9 @@ namespace IttaiWebDemo
                 String uName = userName.Value;
                 String pass = password.Value;
 
-                if (uName == "ittai" && pass == "1234")
+                string fileName = "Database1.mdf";
+                string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
+                if (DBHelper.IsExist(fileName, SQLString))
                 {
                     //Response.Redirect("Welcome.aspx");
                     message.InnerText = "Hellow " + uName;
@@ -46,7 +49,11 @@ namespace IttaiWebDemo
             SqlDataAdapter adapter = new SqlDataAdapter(SQLStr, connection);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "Users");
-            
+
+            string fileName = "Database1.mdf";
+            DataTable dt = DBHelper.GetDataTable(fileName, SQLStr);
+
+
             return ds;
         }
     }

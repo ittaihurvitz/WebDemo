@@ -2,46 +2,39 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Xml.Linq;
-using System.Web.Hosting;
+
 
 /// <summary>
-/// Class Helper helps with Database actions
+/// Class DBHelper helps with Database actions
 /// </summary>
 /// 
 
 namespace IttaiWebDemo
 {
-    public class Helper
+    public class DBHelper
     {
+        // Connects to the database and returns the connection object
         public static SqlConnection ConnectToDb(string fileName)
         {
-			string dbName = fileName;
-            string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + HostingEnvironment.ApplicationPhysicalPath + "App_Data\\"+ dbName + ";Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\"+ fileName + ";Integrated Security=True";
 
-            SqlConnection conn = new SqlConnection(connString);
+            SqlConnection conn = new SqlConnection(connectionString);
             return conn;
         }
 
-        public static void DoQuery(string fileName, string sql)
+        // Executes a non-query SQL command (like INSERT, UPDATE, DELETE)
+        public static int DoQuery(string fileName, string sql)
         {
+            int rowsAffected = 0;
             SqlConnection conn = ConnectToDb(fileName);
             conn.Open();
             SqlCommand com = new SqlCommand(sql, conn);
-            com.ExecuteNonQuery();
+            rowsAffected = com.ExecuteNonQuery();
             conn.Close();
+            return rowsAffected;
         }
 
-
-
+        // Executes a SQL query and checks if it returns any results
         public static bool IsExist(string fileName, string sql)
         {
 
@@ -56,21 +49,16 @@ namespace IttaiWebDemo
 
         }
 
-        public static DataTable ExecuteDataTable(string fileName, string sql)
+        // Executes a SQL query and returns the results in a DataTable
+        public static DataTable GetDataTable(string fileName, string sql)
         {
             SqlConnection conn = ConnectToDb(fileName);
-            conn.Open();
-
             DataTable dt = new DataTable();
-
             SqlDataAdapter tableAdapter = new SqlDataAdapter(sql, conn);
-
             tableAdapter.Fill(dt);
-            conn.Close();
 
             return dt;
         }
-
     }
 }
 
