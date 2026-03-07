@@ -78,6 +78,7 @@
     <Content Include="Registration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelper.cs" />
     <Compile Include="MasterPage1.Master.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
