@@ -35,10 +35,10 @@ namespace IttaiWebDemo
                     string messageText;
                     if (admin)
                     {
-                        messageText = "Hellow " + firstName + " " + lastName + ". You are an administrator.";
+                        messageText = "Hello " + firstName + " " + lastName + ". You are an administrator.";
                     } else
                     {
-                        messageText = "Hellow " + firstName + " " + lastName + ".";
+                        messageText = "Hello " + firstName + " " + lastName + ".";
                     }
                         
                     message.InnerText = messageText;
