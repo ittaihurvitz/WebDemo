@@ -29,7 +29,7 @@ namespace IttaiWebDemo
 
                 string fileName = "Database1.mdf";
                 string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
-                if (DBHelper.IsExist(fileName, SQLString))
+                if (DBHelper.Exists(fileName, SQLString))
                 {
                     //Response.Redirect("Welcome.aspx");
                     message.InnerText = "Hellow " + uName;

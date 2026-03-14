@@ -23,7 +23,7 @@ namespace IttaiWebDemo
         }
 
         // Executes a non-query SQL command (like INSERT, UPDATE, DELETE)
-        public static int DoQuery(string fileName, string sql)
+        public static int DoNonQuery(string fileName, string sql)
         {
             int rowsAffected = 0;
             SqlConnection conn = ConnectToDb(fileName);
@@ -35,7 +35,7 @@ namespace IttaiWebDemo
         }
 
         // Executes a SQL query and checks if it returns any results
-        public static bool IsExist(string fileName, string sql)
+        public static bool Exists(string fileName, string sql)
         {
 
             SqlConnection conn = ConnectToDb(fileName);
