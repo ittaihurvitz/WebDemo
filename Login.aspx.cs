@@ -17,12 +17,6 @@ namespace IttaiWebDemo
         {
             if (IsPostBack)
             {
-                //Get data from database
-                DataSet ds = new DataSet();
-                string SQLStr = "SELECT * FROM tblUsers";
-                ds = RetrieveUsersTable(SQLStr);
-
-
                 // Check the user name and password                
                 String uName = userName.Value;
                 String pass = password.Value;
@@ -31,8 +25,23 @@ namespace IttaiWebDemo
                 string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
                 if (DBHelper.Exists(fileName, SQLString))
                 {
-                    //Response.Redirect("Welcome.aspx");
-                    message.InnerText = "Hellow " + uName;
+                    // Get fisrt name, last name and admin status
+                    SQLString = "SELECT FirstName, LastName, Admin FROM tblUsers WHERE UserName='" + uName + "'";
+                    DataTable dt  = DBHelper.GetDataTable(fileName, SQLString);
+                    string firstName = dt.Rows[0]["FirstName"].ToString();
+                    string lastName = dt.Rows[0]["LastName"].ToString();
+                    bool admin = Convert.ToBoolean(dt.Rows[0]["Admin"]);
+                    // Set the message to be displayed
+                    string messageText;
+                    if (admin)
+                    {
+                        messageText = "Hellow " + firstName + " " + lastName + ". You are an administrator.";
+                    } else
+                    {
+                        messageText = "Hellow " + firstName + " " + lastName + ".";
+                    }
+                        
+                    message.InnerText = messageText;
                 }
                 else
                 {
@@ -55,6 +64,36 @@ namespace IttaiWebDemo
 
 
             return ds;
+        }
+
+        int BackupPageLoadBeforeDeleteCode()
+        {
+            if (IsPostBack)
+            {
+                //Get data from database
+                DataSet ds = new DataSet();
+                string SQLStr = "SELECT * FROM tblUsers";
+                ds = RetrieveUsersTable(SQLStr);
+
+
+                // Check the user name and password                
+                String uName = userName.Value;
+                String pass = password.Value;
+
+                string fileName = "Database1.mdf";
+                string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
+                if (DBHelper.Exists(fileName, SQLString))
+                {
+                    //Response.Redirect("Welcome.aspx");
+                    message.InnerText = "Hellow " + uName;
+                }
+                else
+                {
+                    message.InnerText = "Invalid username or password.";
+                }
+            }
+
+            return 1;
         }
     }
 }
