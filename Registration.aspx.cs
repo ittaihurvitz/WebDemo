@@ -29,7 +29,7 @@ namespace IttaiWebDemo
             int rowsAffected = DBHelper.DoNonQuery(fileName, SQLString);
             if (rowsAffected > 0)
             {
-                message.InnerText = "User registered successfully. Please login with you user name and password";
+                message.InnerText = "User registered successfully. Please login with your user name and password";
             }
             else
             {
