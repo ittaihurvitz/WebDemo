@@ -10,9 +10,9 @@
 }
 
 function validateRegistration(event) {
-    let familyName = document.getElementById("familyName").value;
-    if (familyName.length < 2) {
-        let message = "<p>Family name must be at least 2 characters long.<p>";
+    let lastName = document.getElementById("lastName").value;
+    if (lastName.length < 2) {
+        let message = "<p>last name must be at least 2 characters long.<p>";
         let messageElement = document.getElementById("message");
         messageElement.innerHTML = message;
         return false;

@@ -6,7 +6,7 @@
         <h2>Login</h2>
         <table>
             <tr>
-                <td><label for="userName">Name:</label></td>
+                <td><label for="userName">User Name:</label></td>
                 <td><input type="text" id="userName" name="userName" value="" runat="server" /></td>
             </tr>
             <tr>

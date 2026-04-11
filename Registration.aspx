@@ -6,12 +6,33 @@
         <h2>Registration</h2>
         <table>
             <tr>
-                <td><label for="userName">Name:</label></td>
+                <td><label for="userName">User Name:</label></td>
                 <td><input type="text" id="userName" name="userName" value="" runat="server" /></td>
             </tr>
             <tr>
-                <td><label for="familyName">family Name:</label></td>
-                <td><input type="text" id="familyName" name="familyName" value="" runat="server" /></td>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName" name="firstName" value="" runat="server" /></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">last Name:</label></td>
+                <td><input type="text" id="lastName" name="lastName" value="" runat="server" /></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" value="" runat="server" required/></td>
+            </tr>
+            <tr>
+                <td><label for="confirmPassword">Confirm Password:</label></td>
+                <td><input type="password" id="password1" name="password" value=""/></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td><select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select></td>
             </tr>
         </table>
 
