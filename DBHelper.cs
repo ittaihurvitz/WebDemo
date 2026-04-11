@@ -16,7 +16,7 @@ namespace IttaiWebDemo
         // Connects to the database and returns the connection object
         public static SqlConnection ConnectToDb(string fileName)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\"+ fileName + ";Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\" + fileName + ";Integrated Security=True";
 
             SqlConnection conn = new SqlConnection(connectionString);
             return conn;
