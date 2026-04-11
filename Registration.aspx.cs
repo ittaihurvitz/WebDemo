@@ -18,5 +18,23 @@ namespace IttaiWebDemo
             }
 
         }
+        protected void registerButton_Click(object sender, EventArgs e)
+        {
+            String uName = userName.Value;
+            String pass = password.Value;
+            String fName = firstName.Value;
+            String lName = lastName.Value;
+            string fileName = "Database1.mdf";
+            string SQLString = "INSERT INTO tblUsers (UserName, Password, FirstName, LastName, Admin) VALUES ('" + uName + "', '" + pass + "', '" + fName + "', '" + lName + "', '" + false + "')";
+            int rowsAffected = DBHelper.DoNonQuery(fileName, SQLString);
+            if (rowsAffected > 0)
+            {
+                message.InnerText = "User registered successfully. Please login with you user name and password";
+            }
+            else
+            {
+                message.InnerText = "Error registering user.Please try with another user name";
+            }
+        }
     }
 }

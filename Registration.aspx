@@ -37,7 +37,13 @@
         </table>
 
         <div style="margin:20px">
-            <button type="submit" onclick="return validateRegistration()">Register</button>
+            <%--<button type="submit" onserverclick="registerButton_Click" onclick="return validateRegistration()" runat="server" >Register</button>--%>
+            <asp:Button 
+                ID="registerButton" 
+                runat="server" 
+                Text="Register" 
+                OnClientClick="return validateRegistration();" 
+                OnClick="registerButton_Click" />
         </div>
             
     </div>
