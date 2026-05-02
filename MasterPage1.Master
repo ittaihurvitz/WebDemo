@@ -14,8 +14,8 @@
         <div>
             <div class="top_container">
               <div class="box side"><img src="/images/dancing_logo.jpg" alt="Dancing"></div>
-              <div class="box middle">ריקודי עם ישראליים</div>
-              <div class="box side">Welcome Visitor</div>
+              <div class="box middle">ריקודי עם ישראלים</div>
+              <div class="box side"><%= "Welcome " + Session["UserName"] %></div>
             </div>
         </div>
         <nav>

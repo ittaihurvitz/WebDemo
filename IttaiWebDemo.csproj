@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Couples.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Lines.aspx" />
     <Content Include="Circle.aspx" />
     <Content Include="App_Data\Database1.mdf" />
@@ -92,6 +93,9 @@
     </Compile>
     <Compile Include="Couples.aspx.designer.cs">
       <DependentUpon>Couples.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Lines.aspx.cs">
       <DependentUpon>Lines.aspx</DependentUpon>

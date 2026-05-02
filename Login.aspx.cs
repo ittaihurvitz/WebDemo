@@ -25,6 +25,10 @@ namespace IttaiWebDemo
                 string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
                 if (DBHelper.Exists(fileName, SQLString))
                 {
+                    // Set the session variable to store the user name
+                    Session["UserName"] = uName;
+                    Session["LoggedIn"] = true;
+
                     // Get fisrt name, last name and admin status
                     SQLString = "SELECT FirstName, LastName, Admin FROM tblUsers WHERE UserName='" + uName + "'";
                     DataTable dt  = DBHelper.GetDataTable(fileName, SQLString);
@@ -36,9 +40,11 @@ namespace IttaiWebDemo
                     if (admin)
                     {
                         messageText = "Hello " + firstName + " " + lastName + ". You are an administrator.";
+                        Session["Admin"] = true;
                     } else
                     {
                         messageText = "Hello " + firstName + " " + lastName + ".";
+                        Session["Admin"] = false;
                     }
                         
                     message.InnerText = messageText;
