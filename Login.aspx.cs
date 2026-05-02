@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace IttaiWebDemo
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,10 +48,13 @@ namespace IttaiWebDemo
                     }
                         
                     message.InnerText = messageText;
+                    Response.Redirect("About.aspx");
                 }
                 else
                 {
                     message.InnerText = "Invalid username or password.";
+                    Session["UserName"] = "Visitor";
+                    Session["LoggedIn"] = false;
                 }
             }
         }
@@ -72,34 +75,5 @@ namespace IttaiWebDemo
             return ds;
         }
 
-        int BackupPageLoadBeforeDeleteCode()
-        {
-            if (IsPostBack)
-            {
-                //Get data from database
-                DataSet ds = new DataSet();
-                string SQLStr = "SELECT * FROM tblUsers";
-                ds = RetrieveUsersTable(SQLStr);
-
-
-                // Check the user name and password                
-                String uName = userName.Value;
-                String pass = password.Value;
-
-                string fileName = "Database1.mdf";
-                string SQLString = "SELECT * FROM tblUsers WHERE UserName='" + uName + "' AND Password='" + pass + "'";
-                if (DBHelper.Exists(fileName, SQLString))
-                {
-                    //Response.Redirect("Welcome.aspx");
-                    message.InnerText = "Hellow " + uName;
-                }
-                else
-                {
-                    message.InnerText = "Invalid username or password.";
-                }
-            }
-
-            return 1;
-        }
     }
 }

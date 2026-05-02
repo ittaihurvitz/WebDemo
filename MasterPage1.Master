@@ -20,14 +20,14 @@
         </div>
         <nav>
             <ul>
-                <li id="main" runat="server"><a href="Main.aspx">Main</a></li>
-                <li id="login" runat="server"><a href="Login.aspx">Login</a></li>
-                <li id="register" runat="server"><a href="Registration.aspx">Registration</a></li>
-                <li id="about" runat="server"><a href="About.aspx">About</a></li>
-                <li id="history" runat="server"><a href="History.aspx">History</a></li>
-                <li id="circle" runat="server"><a href="Circle.aspx">ריקודי מעגל</a></li>
-                <li id="lines" runat="server"><a href="Lines.aspx">ריקודי שורות</a></li>
-                <li id="couples" runat="server"><a href="Couples.aspx">ריקודי זוגות</a></li>
+                <li id="menuMain" runat="server"><a href="Main.aspx">Main</a></li>
+                <li id="nemuLogin" runat="server"><a href="Login.aspx">Login</a></li>
+                <li id="menuRegister" runat="server"><a href="Registration.aspx">Registration</a></li>
+                <li id="menuAbout" runat="server"><a href="About.aspx">About</a></li>
+                <li id="menuHistory" runat="server"><a href="History.aspx">History</a></li>
+                <li id="menuCircle" runat="server"><a href="Circle.aspx">ריקודי מעגל</a></li>
+                <li id="menuLines" runat="server"><a href="Lines.aspx">ריקודי שורות</a></li>
+                <li id="menuCouples" runat="server"><a href="Couples.aspx">ריקודי זוגות</a></li>
             </ul>
         </nav>
         <div>

@@ -33,76 +33,76 @@ namespace IttaiWebDemo
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// main control.
+        /// menuMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl main;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuMain;
 
         /// <summary>
-        /// login control.
+        /// nemuLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nemuLogin;
 
         /// <summary>
-        /// register control.
+        /// menuRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuRegister;
 
         /// <summary>
-        /// about control.
+        /// menuAbout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl about;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuAbout;
 
         /// <summary>
-        /// history control.
+        /// menuHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl history;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuHistory;
 
         /// <summary>
-        /// circle control.
+        /// menuCircle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl circle;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuCircle;
 
         /// <summary>
-        /// lines control.
+        /// menuLines control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lines;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuLines;
 
         /// <summary>
-        /// couples control.
+        /// menuCouples control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl couples;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuCouples;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

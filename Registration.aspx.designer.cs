@@ -11,7 +11,7 @@ namespace IttaiWebDemo
 {
 
 
-    public partial class WebForm2
+    public partial class Registration
     {
 
         /// <summary>

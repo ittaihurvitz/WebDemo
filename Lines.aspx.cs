@@ -15,8 +15,9 @@ namespace IttaiWebDemo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (Session["LoggedIn"] == null || !Convert.ToBoolean(Session["LoggedIn"]))
             {
+                Response.Redirect("Login.aspx", true);
             }
         }
     }
