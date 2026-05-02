@@ -64,10 +64,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Couples.aspx" />
+    <Content Include="Lines.aspx" />
+    <Content Include="Circle.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="images\circle.jpg" />
+    <Content Include="images\couples.jpg" />
+    <Content Include="images\dancing.jpg" />
+    <Content Include="images\dancing_logo.jpg" />
+    <Content Include="images\lines.jpg" />
+    <Content Include="About.aspx" />
+    <Content Include="History.aspx" />
+    <Content Include="Main.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="validation.js" />
     <Content Include="Web.config" />
@@ -75,7 +86,49 @@
     <Content Include="Registration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Couples.aspx.cs">
+      <DependentUpon>Couples.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Couples.aspx.designer.cs">
+      <DependentUpon>Couples.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lines.aspx.cs">
+      <DependentUpon>Lines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lines.aspx.designer.cs">
+      <DependentUpon>Lines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Circle.aspx.cs">
+      <DependentUpon>Circle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Circle.aspx.designer.cs">
+      <DependentUpon>Circle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBHelper.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage1.Master.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +163,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

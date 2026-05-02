@@ -1,3 +1,66 @@
 ﻿body {
     background-color: lightblue;
 }
+
+/* Navigation bar styles */
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+    nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    nav li {
+        height: 50px;
+    }
+
+    nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+    nav li:first-child {
+        margin-right: auto;
+    }
+
+
+/* Top styles */
+.top_container {
+    display: flex; /* Ensures items stay in one line */
+    width: 100%;
+}
+
+.box {
+    box-sizing: border-box; /* Includes padding/border in width */
+    height: 45px;
+}
+
+.side {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.middle {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}

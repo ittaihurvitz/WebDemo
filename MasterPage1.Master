@@ -4,14 +4,32 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Dancing</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="StyleSheet1.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Title from the master page</h1>
     <form id="form1" runat="server">
+        <div>
+            <div class="top_container">
+              <div class="box side"><img src="/images/dancing_logo.jpg" alt="Dancing"></div>
+              <div class="box middle">ריקודי עם ישראליים</div>
+              <div class="box side">Welcome Visitor</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li id="main" runat="server"><a href="Main.aspx">Main</a></li>
+                <li id="login" runat="server"><a href="Login.aspx">Login</a></li>
+                <li id="register" runat="server"><a href="Registration.aspx">Registration</a></li>
+                <li id="about" runat="server"><a href="About.aspx">About</a></li>
+                <li id="history" runat="server"><a href="History.aspx">History</a></li>
+                <li id="circle" runat="server"><a href="Circle.aspx">ריקודי מעגל</a></li>
+                <li id="lines" runat="server"><a href="Lines.aspx">ריקודי שורות</a></li>
+                <li id="couples" runat="server"><a href="Couples.aspx">ריקודי זוגות</a></li>
+            </ul>
+        </nav>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
