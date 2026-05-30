@@ -79,6 +79,7 @@
     <Content Include="images\lines.jpg" />
     <Content Include="About.aspx" />
     <Content Include="History.aspx" />
+    <Content Include="LoginID.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="validation.js" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="History.aspx.designer.cs">
       <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginID.aspx.cs">
+      <DependentUpon>LoginID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginID.aspx.designer.cs">
+      <DependentUpon>LoginID.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
